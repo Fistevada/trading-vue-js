@@ -56,6 +56,7 @@ export default {
             })
         },
         draw(ctx) {
+            console.log(111, ctx)
             if (!this.p1 || !this.p2) return
 
             ctx.lineWidth = this.line_width

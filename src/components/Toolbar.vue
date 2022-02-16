@@ -30,7 +30,6 @@ export default {
     },
     methods: {
         selected(tool) {
-            console.log(12, tool)
             this.$emit('custom-event', {
                 event:'tool-selected', args: [tool.type]
             })
@@ -40,7 +39,6 @@ export default {
             }
         },
         is_selected(tool) {
-            console.log(123, tool)
             if (tool.group) {
                 return !!tool.items.find(
                     x => x.type === this.data.tool)

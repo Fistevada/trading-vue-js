@@ -6279,7 +6279,6 @@ var Ray = /*#__PURE__*/function (_Line) {
       });
     },
     draw: function draw(ctx) {
-      console.log(111, ctx);
       if (!this.p1 || !this.p2) return;
       ctx.lineWidth = this.line_width;
       ctx.strokeStyle = this.color;
@@ -10028,7 +10027,6 @@ function Toolbarvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == 
   mounted: function mounted() {},
   methods: {
     selected: function selected(tool) {
-      console.log(12, tool);
       this.$emit('custom-event', {
         event: 'tool-selected',
         args: [tool.type]
@@ -10041,8 +10039,6 @@ function Toolbarvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == 
     },
     is_selected: function is_selected(tool) {
       var _this = this;
-
-      console.log(123, tool);
 
       if (tool.group) {
         return !!tool.items.find(function (x) {

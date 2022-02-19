@@ -25,7 +25,8 @@ module.exports = class WWPlugin {
                     let json = JSON.stringify([data])
                     try {
                         var prev = fs.readFileSync(PATH + 'ww$$$.json')
-                    } catch(e) {}
+                    } catch(e) {
+                        console.log(e)}
 
                     // Write new compiled ww only if the src changed
                     if (json != prev) {

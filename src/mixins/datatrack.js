@@ -47,6 +47,7 @@ export default {
                     var off = (nt - cndl[0]) / this.interval_ms
                     this.goto(res[0] + off)
                 } catch(e) {
+                    console.log(e)
                     this.goto(this.ti_map.t2i(this._data_t))
                 }
             }

@@ -1,5 +1,5 @@
 /*!
- * TradingVue.JS - v1.0.2 - Wed Feb 16 2022
+ * TradingVue.JS - v1.0.2 - Sun Feb 20 2022
  *     https://github.com/tvjsx/trading-vue-js
  *     Copyright (c) 2019 C451 Code's All Right;
  *     Licensed under the MIT license
@@ -896,8 +896,9 @@ var lib_default = /*#__PURE__*/__webpack_require__.n(lib);
       var i0 = ia.valpos[t1].next;
       return [res, i0];
     } catch (e) {
-      // Something wrong with fancy slice lib
+      console.log(e); // Something wrong with fancy slice lib
       // Fast fix: fallback to filter
+
       return [arr.filter(function (x) {
         return x[0] >= t1 && x[0] <= t2;
       }), 0];
@@ -3982,6 +3983,7 @@ var Mouse = /*#__PURE__*/function () {
       this._$emit = this.$emit;
       this.$emit = this.custom_event;
     } catch (e) {
+      console.log(e);
       return;
     }
 
@@ -8797,6 +8799,7 @@ Keyboard_component.options.__file = "src/components/Keyboard.vue"
           var off = (nt - cndl[0]) / this.interval_ms;
           this["goto"](res[0] + off);
         } catch (e) {
+          console.log(e);
           this["goto"](this.ti_map.t2i(this._data_t));
         }
       }
@@ -8910,7 +8913,9 @@ var TI = /*#__PURE__*/function () {
         try {
           var k1 = utils.fast_nearest(this.sub, data[0][0])[0];
           if (k1 !== null && k1 >= 0) k = k1;
-        } catch (e) {}
+        } catch (e) {
+          console.log(e);
+        }
       }
 
       var t0 = this.sub[0][0];
@@ -9018,7 +9023,9 @@ var TI = /*#__PURE__*/function () {
         var _k = (t - tk) / (tk2 - tk);
 
         return this.ss + i[0] + _k * (i[1] - i[0]);
-      } catch (e) {}
+      } catch (e) {
+        console.log(e);
+      }
 
       return undefined;
     } // Auto detect: is it time or index?

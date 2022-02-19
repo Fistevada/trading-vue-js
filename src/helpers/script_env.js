@@ -174,6 +174,7 @@ export default class ScriptEnv {
                 }
             `)
         } catch(e) {
+            console.log(e)
             return Function('self,shared', `
                 'use strict';
                 this.init = () => {}

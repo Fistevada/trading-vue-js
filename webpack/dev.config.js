@@ -53,7 +53,8 @@ module.exports = (env, options) => ({
                 try {
                     let argv = JSON.parse(req.query.argv)
                     console.log(...argv)
-                } catch(e) {}
+                } catch(e) {
+                    console.log(e)}
                 res.send("[OK]")
             })
         }

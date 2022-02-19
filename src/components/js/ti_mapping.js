@@ -87,7 +87,8 @@ export default class TI {
             try {
                 let k1 = Utils.fast_nearest(this.sub, data[0][0])[0]
                 if (k1 !== null && k1 >= 0) k = k1
-            } catch(e) { }
+            } catch(e) {
+                console.log(e)}
         }
 
         let t0 = this.sub[0][0]
@@ -202,7 +203,8 @@ export default class TI {
             let tk2 = this.sub[i[1]][0]
             let k = (t - tk) / (tk2 - tk)
             return this.ss + i[0] + k * (i[1] - i[0])
-        } catch(e) { }
+        } catch(e) {
+            console.log(e) }
 
         return undefined
     }

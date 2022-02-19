@@ -129,6 +129,7 @@ export default {
             let i0 = ia.valpos[t1].next
             return [res, i0]
         } catch(e) {
+            console.log(e)
             // Something wrong with fancy slice lib
             // Fast fix: fallback to filter
             return [arr.filter(x =>

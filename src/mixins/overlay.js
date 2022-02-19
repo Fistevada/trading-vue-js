@@ -30,6 +30,7 @@ export default {
             this._$emit = this.$emit
             this.$emit = this.custom_event
         } catch(e) {
+            console.log(e)
             return
         }
 

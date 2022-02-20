@@ -3,7 +3,8 @@
         :toolbar="true"
         :color-back="colors.colorBack"
         :color-grid="colors.colorGrid"
-        :color-text="colors.colorText">
+        :color-text="colors.colorText"
+         @tool-selected="tool_selected">
 </trading-vue>
 </template>
 
@@ -23,7 +24,11 @@ export default {
         onResize(event) {
             this.width = window.innerWidth
             this.height = window.innerHeight - 50
-        }
+        },
+
+        tool_selected(d) {
+            console.log(2, d)
+        },
     },
     mounted() {
         window.addEventListener('resize', this.onResize)

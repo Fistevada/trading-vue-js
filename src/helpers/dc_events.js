@@ -71,7 +71,7 @@ export default class DCEvents {
                     break
                 }
                 this.tv.$set(this.data, 'tool', args[0])
-                if (args[0] === 'Cursor') {
+                if (args[0] === 'Cursor' || args[0] === 'FullScreen:Default') {
                     this.drawing_mode_off()
                 }
                 break
